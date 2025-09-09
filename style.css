@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form {
+  margin-left: 35%;
+  margin-top: 10%;
+  border: 2px dashed black;
+  width: 400px;
+}
+
+.form-header {
+  background-color: blueviolet;
+}
+.center {
+  text-align: center;
+  color: white;
+}
+
+.small-font {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.form-body {
+  padding: 16px;
+}
+
+label {
+  font-size: 18px;
+  margin-top: 12px;
+}
+input {
+  width: 100%;
+  padding: 6px;
+  font-size: 18px;
+}
+
+.form-group {
+  margin-top: 14px;
+}
+
+select {
+  width: 30%;
+  padding: 6px;
+  font-size: 18px;
+}
+
+#month {
+  margin: 0 3.5%;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6a1b9a;
+}
