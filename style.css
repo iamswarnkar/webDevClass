@@ -3,17 +3,46 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.heading {
+  text-align: center;
+}
 .container {
-  height: 300px;
-  width: 400px;
-  border: 5px solid black;
-  margin-left: 50px;
-  padding: 10px;
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.child {
-  height: 100px;
-  width: 100px;
-  border: 1px solid black;
-  padding-left: 200px;
+.form-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+label {
+  width: 35%;
+  text-transform: uppercase;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  align-self: flex-end;
 }
