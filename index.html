@@ -3,60 +3,509 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Website</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Stone Hills - The Great Escape</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      xintegrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Custom styles */
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+        /* Add padding to body to offset fixed navbar */
+        padding-top: 100px;
+      }
+      .font-sans-display {
+        font-family: "Playfair Display", serif;
+      }
+      /* Custom styles for hero section to ensure it's always full height */
+      .hero-section {
+        height: calc(100vh - 100px); /* Adjust based on navbar height */
+        background-size: cover;
+        background-position: center;
+      }
+      /* Style for service/gallery image hover effect */
+      .img-hover-zoom {
+        transition: transform 0.3s ease-in-out;
+      }
+      .img-hover-zoom:hover {
+        transform: scale(1.05);
+      }
+      /* Styling for Bootstrap carousel controls */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        padding: 1.2rem;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container">
-      <h1 class="heading">Reach Out to Us</h1>
-      <div class="form-group">
-        <label for="name">Name*</label>
-        <input type="text" name="name" id="name" placeholder="Name" />
+  <body class="bg-white text-dark">
+    <!-- Header Component -->
+    <header class="fixed-top bg-white shadow-sm">
+      <div class="bg-light text-center py-2 small text-secondary">
+        ✨ Weekday discount - flat 15% off ✨
       </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+          <a
+            class="navbar-brand font-sans-display fs-2 fw-bold text-dark"
+            href="#"
+            >STONE HILLS</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#villas">Villas and Stays</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services-section">Experiences</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-section">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-success" href="#contact-section"
+                  >Book Now</a
+                >
+              </li>
+              <!-- <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                <a href="#" class="btn btn-outline-secondary">Log in</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-      <div class="form-group">
-        <label for="name">City*</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter Your City Name"
-        />
-      </div>
+    <main>
+      <!-- Hero Component -->
+      <section
+        class="hero-section d-flex align-items-center justify-content-center text-white"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop');
+        "
+      >
+        <div
+          class="text-center p-4 p-md-5 rounded"
+          style="
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+          "
+        >
+          <h1 class="display-1 font-sans-display fw-bold">The Great Escape</h1>
+          <p class="lead fs-4 mt-3">Embrace the wilderness</p>
+        </div>
+      </section>
 
-      <div class="form-group">
-        <label for="name">Phone Number*</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter Your Phone Number Name"
-        />
-      </div>
+      <!-- About Component -->
+      <section id="about-section" class="py-5">
+        <div class="container text-center col-lg-8">
+          <h2 class="display-4 font-sans-display mb-4">About Us</h2>
+          <p class="lead text-secondary mb-3">
+            Welcome to Stone Hills, a breathtaking property nestled on a hilltop
+            with awe-inspiring views. Located in a serene setting, Stone Hills
+            offers an unparalleled luxury stay and glamping experience amidst
+            the tranquil beauty of the surrounding landscape.
+          </p>
+          <p class="lead text-secondary">
+            From elegant cottages to spacious glamping tents, every detail has
+            been carefully curated to provide the utmost comfort and relaxation,
+            blending seamlessly with nature.
+          </p>
+        </div>
+      </section>
 
-      <div class="form-group">
-        <label for="name">Email*</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter Your Email Name"
-        />
-      </div>
+      <!-- Gallery Component -->
+      <section id="villas" class="py-5 bg-light">
+        <div class="container text-center">
+          <p class="text-secondary">For you and your loved ones</p>
+          <h2 class="display-4 font-sans-display mb-5">Reminiscence</h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="overflow-hidden rounded shadow-sm h-100">
+                <img
+                  src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Spacious Room Interior"
+                  class="w-100 h-100 object-cover img-hover-zoom"
+                />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="overflow-hidden rounded shadow-sm">
+                    <img
+                      src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Balcony View"
+                      class="w-100 object-cover img-hover-zoom"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="overflow-hidden rounded shadow-sm">
+                    <img
+                      src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Decorative Lamp"
+                      class="w-100 object-cover img-hover-zoom"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="overflow-hidden rounded shadow-sm">
+                    <img
+                      src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="House exterior"
+                      class="w-100 object-cover img-hover-zoom"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="overflow-hidden rounded shadow-sm">
+                    <img
+                      src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="People in off-road vehicle"
+                      class="w-100 object-cover img-hover-zoom"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="form-group">
-        <label for="name">Message*</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter Your Message Name"
-        />
+      <!-- Services Component -->
+      <section id="services-section" class="py-5">
+        <div class="container text-center">
+          <h2 class="display-4 font-sans-display mb-3">Our Services</h2>
+          <p class="lead text-secondary mb-5 mx-auto" style="max-width: 600px">
+            Uncover a treasure trove of services crafted to enchant and enrich
+            your stay
+          </p>
+          <div class="row g-4">
+            <!-- Service Card -->
+            <div class="col-md-6">
+              <div class="card text-white border-0 shadow-sm overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img img-hover-zoom"
+                  alt="Bonfire"
+                />
+                <div
+                  class="card-img-overlay d-flex align-items-end p-4"
+                  style="
+                    background: linear-gradient(
+                      to top,
+                      rgba(0, 0, 0, 0.7),
+                      transparent
+                    );
+                  "
+                >
+                  <h3 class="card-title font-sans-display">
+                    Bonfire and Barbeque
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card -->
+            <div class="col-md-6">
+              <div class="card text-white border-0 shadow-sm overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img img-hover-zoom"
+                  alt="Candle Light Dinner"
+                />
+                <div
+                  class="card-img-overlay d-flex align-items-end p-4"
+                  style="
+                    background: linear-gradient(
+                      to top,
+                      rgba(0, 0, 0, 0.7),
+                      transparent
+                    );
+                  "
+                >
+                  <h3 class="card-title font-sans-display">
+                    Candle Light Dinner
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card -->
+            <div class="col-md-6">
+              <div class="card text-white border-0 shadow-sm overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img img-hover-zoom"
+                  alt="Bathtub overlooking hills"
+                />
+                <div
+                  class="card-img-overlay d-flex align-items-end p-4"
+                  style="
+                    background: linear-gradient(
+                      to top,
+                      rgba(0, 0, 0, 0.7),
+                      transparent
+                    );
+                  "
+                >
+                  <h3 class="card-title font-sans-display">
+                    Bathtub overlooking the hills
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card -->
+            <div class="col-md-6">
+              <div class="card text-white border-0 shadow-sm overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img img-hover-zoom"
+                  alt="Jeep Ride"
+                />
+                <div
+                  class="card-img-overlay d-flex align-items-end p-4"
+                  style="
+                    background: linear-gradient(
+                      to top,
+                      rgba(0, 0, 0, 0.7),
+                      transparent
+                    );
+                  "
+                >
+                  <h3 class="card-title font-sans-display">
+                    Off-road jeep ride / Guided Trek
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials-section" class="py-5 bg-light">
+        <div class="container col-lg-8">
+          <div
+            id="testimonialCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active">
+                <figure class="px-md-5">
+                  <blockquote class="blockquote fs-5 fst-italic">
+                    <p>
+                      "What a lovely experience with family! We stayed in the
+                      summer house which was so aesthetically done. We went
+                      off-roading, trekking - absolutely loved spotting
+                      peacocks! The bonfire in the evening was well done and we
+                      especially enjoyed the chicken and veg BBQ."
+                    </p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer mt-3 fs-6">
+                    Sindhu W
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="carousel-item">
+                <figure class="px-md-5">
+                  <blockquote class="blockquote fs-5 fst-italic">
+                    <p>
+                      "An amazing getaway just a short drive from the city. The
+                      views are spectacular, and the service is top-notch. The
+                      guided trek was the highlight of our trip. Highly
+                      recommended for anyone looking to reconnect with nature."
+                    </p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer mt-3 fs-6">
+                    Rohan K
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <div
+              class="carousel-indicators"
+              style="position: static; margin-top: 1rem"
+            >
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="0"
+                class="active bg-dark"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="1"
+                class="bg-dark"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Component -->
+      <section id="contact-section" class="py-5">
+        <div class="container col-lg-10">
+          <h2 class="display-4 font-sans-display text-center mb-5">Contact</h2>
+          <div class="row align-items-center">
+            <!-- Info -->
+            <div class="col-md-5">
+              <h3 class="font-sans-display fs-2">Stone Hills</h3>
+              <p class="text-secondary lead">
+                25/1 Kempathimmanahalli Post, Nandi Hills Road, Devanahalli
+                Taluk, Bengaluru Rural 561110
+              </p>
+              <p class="text-secondary">
+                <strong>Email:</strong> info@stonehills.in
+              </p>
+              <p class="text-secondary">
+                <strong>Phone:</strong> +91 9483344567
+              </p>
+            </div>
+            <!-- Form -->
+            <div class="col-md-7">
+              <form id="contact-form">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      class="form-control"
+                      placeholder="Type the subject"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="form-control"
+                      placeholder="Type your message here..."
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-dark w-100 py-2">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="bg-light border-top">
+      <div class="container text-center py-5">
+        <h3 class="font-sans-display fs-2 text-dark mb-3">STONE HILLS</h3>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="nav-link px-2 text-secondary">Privacy Policy</a>
+          <a href="#" class="nav-link px-2 text-secondary">About Us</a>
+          <a href="#" class="nav-link px-2 text-secondary">Terms</a>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="name"></label>
-        <button class="btn">Submit</button>
+      <div class="text-center py-3 bg-dark text-white-50 small">
+        © 2025 Stone Hills. All Rights Reserved.
       </div>
-    </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      xintegrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- Contact Form Logic ---
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert(
+              "Thank you for your message! We will get back to you shortly."
+            );
+            e.target.reset();
+          });
+      });
+    </script>
   </body>
 </html>
